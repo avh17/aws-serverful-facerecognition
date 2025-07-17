@@ -6,7 +6,7 @@ This project implements an elastic face recognition application leveraging Amazo
 
 The application follows a multi-tiered cloud architecture consisting of a Web Tier and an Application Tier, utilizing AWS services like EC2, S3, and SQS for scalability and persistence.
 
-![Project Architecture Diagram](Project%201%20Part%20II.pdf#page=1)
+<img width="1928" height="808" alt="image" src="https://github.com/user-attachments/assets/0184ef0c-1448-46bb-b202-639b34324732" />
 
 ## Components
 
@@ -81,11 +81,3 @@ To ensure consistency and facilitate deployment, all resources adhere to specifi
 4.  **Web Tier Deployment**: Launch a single EC2 instance named `web-instance` and assign it an Elastic IP address. Deploy `server.py` and `controller.py` to this instance.
 5.  **S3 Buckets and SQS Queues**: Create the S3 input and output buckets, and the SQS request and response queues, adhering to the specified naming conventions and SQS message size limit.
 6.  **Application Tier Deployment**: The `controller.py` will manage the launching and termination of `backend.py` instances based on the autoscaling logic.
-
-## Project Structure
-
-The project code is organized into the following directories:
-
-* `web-tier/`: Contains `server.py` and `controller.py`.
-* `app-tier/`: Contains `backend.py` and the deep learning model code/weights.
-* `credentials/`: (For submission, contains `credentials.txt` with AWS access keys and web tier Elastic IP).
